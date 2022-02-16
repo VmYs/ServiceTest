@@ -30,9 +30,10 @@ class MyService : Service() {
     }
 
     override fun onBind(intent: Intent): IBinder {
-        TODO("Return the communication channel to the service.")
+        return mBinder
     }
 
+    //前台Service
     override fun onCreate() {
         super.onCreate()
         Log.d("MyService", "onCreate executed")
